@@ -12,13 +12,14 @@
     <header>
         <nav class="navbar">
             <div class="nav-brand">
-                <img src="imagesLGN/logo_oscuro.jpeg" alt="Legionarios Logo" class="logo">
+                <img src="imagesLGN/logo_trans.png" alt="Legionarios Logo" class="logo">
             </div>
             <div class="nav-links">
                 <a href="#about">Nosotros</a>
                 <a href="#leagues">Liga</a>
                 <a href="#calendar">Calendario</a>
                 <a href="#flag">Flag</a>
+                <a href="#shop">Comprar</a>
                 <a href="#contact">Contacto</a>
             </div>
         </nav>
@@ -29,7 +30,6 @@
         <div class="hero-content">
 
             <h1>LEGIONARIOS FOOTBALL AMERICANO</h1>
-            <p class="established">DESDE 2007</p>
         </div>
     </section>
 
@@ -123,6 +123,51 @@
         </div>
     </section>
 
+    <!-- Shop Section -->
+    <section id="shop" class="section-gradient">
+        <div class="container">
+            <h2>COMPRAR MERCH</h2>
+            <div class="shop-content">
+                <div class="shop-text">
+                    <h3>Merchandise Oficial de Legionarios</h3>
+                    <div class="divider-line"></div>
+                </div>
+                
+                <div class="shop-layout">
+                    <!-- Productos -->
+                    <div class="shop-products">
+                        <h3>Productos Disponibles</h3>
+                        <div id="products-container" class="products-grid">
+                            <!-- Los productos se cargarán dinámicamente aquí -->
+                        </div>
+                    </div>
+
+                    <!-- Carrito -->
+                    <div class="shop-cart">
+                        <div class="cart-container">
+                            <h3>Tu Carrito</h3>
+                            <ul id="cart-items" class="cart-items-list">
+                                <!-- Items del carrito se cargarán aquí -->
+                            </ul>
+                            <div class="cart-total">
+                                <strong>Total:</strong>
+                                <span id="cart-total">$0.00</span>
+                            </div>
+                            <button onclick="cart.clearCart()" class="clear-cart-button">
+                                Vaciar Carrito
+                            </button>
+                            <button id="checkout-button" class="checkout-button">
+                                Finalizar Compra
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4">Para consultas sobre tallas y disponibilidad, contactanos por WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto Section -->
     <section id="contact" class="section-gradient">
         <div class="container">
@@ -130,14 +175,10 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
-                    <a href="https://api.whatsapp.com/send/?phone=541170610478" target="_blank">+54 9 11 7061-0478</a>
-                </div>
-                <div class="contact-item">
-                    <i class="far fa-envelope"></i>
-                    <a href="mailto:argentinafootballamericano@gmail.com">argentinafootballamericano@gmail.com</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5491162995252" target="_blank">+54 9 11 6299-5252</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/faargonline/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/legionariosfootball" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.youtube.com/c/footballamericanobuenosaires" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
@@ -145,9 +186,10 @@
     </section>
 
     <footer>
-        <img src="images/argentina_sol.png" alt="Sol de Bandera de Argentina" class="footer-logo">
-        <p>&copy; 2025 Football Americano Argentina. Todos los derechos reservados.</p>
+        <h2 class="golden-army">UNÍTE A LA GOLDEN ARMY</h2>
     </footer>
 
+    <!-- Scripts -->
+    <script src="cart.js"></script>
 </body>
 </html>

@@ -67,11 +67,27 @@ body {
 }
 
 .hero-content {
-    color: var(--text-color);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
+    color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem 2rem;
     border-radius: 10px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.hero-content .established {
+    color: var(--text-color);
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .hero-flag {
@@ -236,6 +252,165 @@ h2 {
     font-weight: bold;
 }
 
+/* Shop Section */
+.shop-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+}
+
+.stock {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Cart Styles */
+.cart-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+}
+
+.cart-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    color: var(--secondary-color);
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-controls button {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-item {
+    background: #ff4444;
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.clear-cart-button {
+    width: 100%;
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.clear-cart-button:hover {
+    background: #cc0000;
+}
+
+.checkout-button {
+    width: 100%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.checkout-button:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
 /* IFAF Section */
 .ifaf-logo {
     display: block;
@@ -295,6 +470,16 @@ footer {
     padding: 2rem;
     text-align: center;
     color: var(--secondary-color);
+}
+
+.golden-army {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .footer-logo {
