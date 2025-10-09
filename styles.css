@@ -1,0 +1,323 @@
+:root {
+    --primary-color: #FFD700;  /* Gold */
+    --secondary-color: #000000;  /* Negro */
+    --text-color: #FFFFFF;  /* Blanco */
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, #B8860B 100%);  /* Degradado dorado */
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #222222 100%);  /* Degradado negro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: var(--gradient-primary);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-brand .logo {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('imagesLGN/equipo.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    color: var(--text-color);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.hero-flag {
+    max-width: 200px;
+    margin-bottom: 2rem;
+}
+
+/* Section Styles */
+.section-gradient {
+    background: var(--gradient-primary);
+    color: var(--secondary-color);
+    padding: 5rem 0;
+}
+
+.section-dark {
+    background: var(--gradient-dark);
+    color: var(--text-color);
+    padding: 5rem 0;
+}
+
+/* Nuevos estilos para Legionarios */
+.divider-line {
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 2rem auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.section-logo {
+    max-width: 300px;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.divider {
+    max-width: 150px;
+    margin: 2rem auto;
+}
+
+/* Teams Grid */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card h3 {
+    padding: 1rem;
+    margin: 0;
+}
+
+.event-card p {
+    padding: 0 1rem;
+}
+
+.event-date {
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* IFAF Section */
+.ifaf-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.separator {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100px;
+}
+
+.ifaf-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background: var(--gradient-primary);
+    padding: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.footer-logo {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Para versión móvil se necesitaría agregar un menú hamburguesa */
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-logo {
+        margin: 0 auto;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
