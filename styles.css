@@ -22,12 +22,18 @@ header h1 {
 }
 
 /* CATÁLOGO */
-#catalogo {
+.catalogo {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.productos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  justify-content: flex-start;
 }
 
 /* Cada producto */
@@ -46,10 +52,12 @@ header h1 {
 }
 
 /* Imagen del producto */
-.producto img {
-  width: 100%;
-  height: auto;
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 /* Botón agregar */
