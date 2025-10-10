@@ -76,3 +76,27 @@ button:hover {
   color: black;
 }
 
+/* CARRITO */
+#carrito {
+  background-color: white;
+  padding: 1rem;
+  border-top: 2px solid gray;
+}
+
+#carrito h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Lista de productos en el carrito */
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-carrito li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 0.5rem 0;
+}
