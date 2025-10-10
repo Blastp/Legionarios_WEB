@@ -20,3 +20,51 @@ header h1 {
   font-weight: normal;
   letter-spacing: 2px;
 }
+
+/* CATÁLOGO */
+#catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Cada producto */
+.producto {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Botón agregar */
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: darkgray;
+  color: black;
+}
+
