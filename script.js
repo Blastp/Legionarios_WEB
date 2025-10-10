@@ -7,3 +7,45 @@ const productos = [
 ];
 
 let carrito = [];
+
+// Mostrar productos
+const listaProductos = document.getElementById("lista-productos");
+if (listaProductos) {
+  productos.forEach(prod => {
+    const div = document.createElement("div");
+    div.classList.add("card");
+    div.innerHTML = `
+      <img src="${prod.img}" alt="${prod.nombre}">
+      <h3>${prod.nombre}</h3>
+      <p>Precio: $${prod.precio}</p>
+      <button onclick="agregarProducto(${prod.id})">Agregar al carrito</button>
+    `;
+    listaProductos.appendChild(div);
+  });
+}
+
+// Mostrar carrito
+function mostrarCarrito() {
+  const lista = document.getElementById("lista-carrito");
+  const total = document.getElementById("total");
+  lista.innerHTML = "";
+
+  let suma = 0;
+
+  carrito.forEach(item => {
+    suma += item.precio * item.cantidad;
+
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${item.nombre} - $${item.precio} x ${item.cantidad}
+      <button onclick="sumar(${item.id})">+</button>
+      <button onclick="restar(${item.id})">-</button>
+      <button onclick="eliminar(${item.id})">Eliminar</button>
+    `;
+    lista.appendChild(li);
+  });
+
+  total.innerText = `Total: $${suma}`;
+}
+
+//CRUD Carrito
