@@ -1,21 +1,25 @@
-/* Estilos Generales */
+/* Estilos Generales - Configuración base del sitio */
 body {
+  /* Uso de Montserrat para una apariencia más elegante */
   font-family: 'Montserrat', sans-serif;
   background-color: whitesmoke;
   color: black;
   margin: 0;
   padding: 0;
+  /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* Mejora la legibilidad con un espaciado sutil entre letras */
   letter-spacing: 0.3px;
 }
 
+/* Configuración de títulos para mantener consistencia visual */
 h1, h2, h3 {
   font-weight: 500;
 }
 
-/* Encabezado */
+/* Encabezado - Barra de navegación principal */
 header {
   background-color: gray;
   color: white;
@@ -26,11 +30,13 @@ header {
 header h1 {
   margin: 0;
   font-weight: normal;
+  /* Espaciado amplio entre letras para el logo */
   letter-spacing: 2px;
 }
 
-/* CATÁLOGO */
+/* CATÁLOGO - Disposición de productos y carrito */
 .catalogo {
+  /* Layout flexible para productos y carrito */
   display: flex;
   justify-content: space-between;
   padding: 2rem;
@@ -38,13 +44,14 @@ header h1 {
 }
 
 .productos {
+  /* Grid flexible para mostrar productos en filas */
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: flex-start;
 }
 
-/* Cada producto */
+/* Tarjetas de productos - Diseño y animaciones */
 .producto {
   background-color: white;
   border: 1px solid lightgray;
@@ -59,23 +66,26 @@ header h1 {
   transform: scale(1.03);
 }
 
-/* Imagen del producto */
+/* Imágenes de productos con efectos interactivos */
 .card img {
   width: 200px;
   height: 200px;
+  /* Mantiene la proporción de la imagen sin distorsión */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
+  /* Transición suave para efectos hover */
   transition: all 0.3s ease;
 }
 
 .card img:hover {
+  /* Efecto de elevación al pasar el mouse */
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   cursor: pointer;
 }
 
-/* Botón agregar */
+/* Botones interactivos con efectos de hover */
 button {
   background-color: black;
   color: white;
@@ -84,10 +94,12 @@ button {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 0.5rem;
+  /* Animación suave para todos los cambios */
   transition: all 0.3s ease;
 }
 
 button:hover {
+  /* Efecto de elevación y cambio de color al pasar el mouse */
   transform: scale(1.1);
   background-color: #333;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
