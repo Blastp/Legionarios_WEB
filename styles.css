@@ -1,17 +1,47 @@
 /* Estilos Generales - Configuración base del sitio */
 body {
-  /* Uso de Montserrat para una apariencia más elegante */
   font-family: 'Montserrat', sans-serif;
   background-color: whitesmoke;
   color: black;
   margin: 0;
   padding: 0;
-  /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Mejora la legibilidad con un espaciado sutil entre letras */
   letter-spacing: 0.3px;
+}
+
+/* Botones y enlaces tipo botón */
+button, .btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  color: white;
+}
+
+/* Estilos específicos para el botón de catálogo */
+.landing .btn {
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
 }
 
 /* Configuración de títulos para mantener consistencia visual */
@@ -19,25 +49,42 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-/* Encabezado - Barra de navegación principal */
+/* Encabezado - Estilos base compartidos */
 header {
   background-color: gray;
   color: white;
-  /* Centrado perfecto vertical y horizontal usando flexbox */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Altura fija para el header */
   height: 80px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Header de la página de inicio */
+body:not(.catalogo-page) header {
+  justify-content: center;
+}
+
+/* Header de la página de catálogo */
+.catalogo ~ header {
+  justify-content: space-between;
+}
+
+/* Posicionamiento del botón Inicio en el catálogo */
+.catalogo-page header nav {
+  margin-left: auto;
 }
 
 header h1 {
   margin: 0;
   font-weight: normal;
-  /* Espaciado amplio entre letras para el logo */
   letter-spacing: 3px;
-  /* Tamaño de fuente más prominente para el logo */
   font-size: 2rem;
+}
+
+header nav .btn {
+  margin: 0;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
 }
 
 /* CATÁLOGO - Disposición de productos y carrito */
@@ -91,25 +138,11 @@ header h1 {
   cursor: pointer;
 }
 
-/* Botones interactivos con efectos de hover */
-button {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 0.5rem;
-  /* Animación suave para todos los cambios */
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  /* Efecto de elevación y cambio de color al pasar el mouse */
-  transform: scale(1.1);
-  background-color: #333;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  color: white;
+/* CARRITO */
+.landing .btn {
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  margin-top: 2rem;
 }
 
 /* CARRITO */
@@ -138,10 +171,18 @@ button:hover {
 }
 
 /* Sección Sobre Nosotros */
+.landing {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;  /* Esto asegura que haya espacio entre las secciones */
+  justify-content: space-between;  /* Distribuye el espacio entre las secciones */
+  padding-bottom: 2rem;  /* Espacio antes del footer */
+}
+
 .landing section:nth-child(2) {
-  margin-top: 5rem;
   text-align: center;
   padding: 0 2rem;
+  margin-top: auto;  /* Empuja la sección hacia abajo */
 }
 
 .landing section:nth-child(2) h2 {
@@ -160,6 +201,5 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 4rem;
   margin-top: auto;
 }
