@@ -23,15 +23,21 @@ h1, h2, h3 {
 header {
   background-color: gray;
   color: white;
-  text-align: center;
-  padding: 1rem;
+  /* Centrado perfecto vertical y horizontal usando flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Altura fija para el header */
+  height: 80px;
 }
 
 header h1 {
   margin: 0;
   font-weight: normal;
   /* Espaciado amplio entre letras para el logo */
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  /* Tamaño de fuente más prominente para el logo */
+  font-size: 2rem;
 }
 
 /* CATÁLOGO - Disposición de productos y carrito */
