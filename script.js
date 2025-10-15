@@ -6,7 +6,7 @@ const productos = [
   { id: 4, nombre: "Reloj Elegance", precio: 210, img: "./images/reloj_elegance.jpg" }
 ];
 
-// Array que almacenará los productos agregados al carrito
+// Array para guardar productos agregados al carrito
 let carrito = [];
 
 // Obtener el contenedor donde se mostrarán los productos
@@ -33,7 +33,7 @@ function mostrarCarrito() {
   // Limpiar la lista actual
   lista.innerHTML = "";
 
-  // Calcular el total y mostrar cada item
+  // Calcula el total
   let suma = 0;
 
   carrito.forEach(item => {
@@ -55,7 +55,7 @@ function mostrarCarrito() {
   total.innerText = `Total: $${suma}`;
 }
 
-// Funciones para manipular el carrito (CRUD: Create, Read, Update, Delete)
+// Funciones para carrito (CRUD)
 
 // Agregar un producto al carrito
 function agregarProducto(id) {
@@ -65,10 +65,8 @@ function agregarProducto(id) {
   const existente = carrito.find(p => p.id === id);
 
   if (existente) {
-    // Si ya existe, aumentar la cantidad
     existente.cantidad++;
   } else {
-    // Si no existe, agregarlo al carrito con cantidad 1
     carrito.push({ ...producto, cantidad: 1 });
   }
 
@@ -86,10 +84,8 @@ function sumar(id) {
 function restar(id) {
   const producto = carrito.find(p => p.id === id);
   if (producto.cantidad > 1) {
-    // Si hay más de 1, reducir la cantidad
     producto.cantidad--;
   } else {
-    // Si solo hay 1, eliminar el producto del carrito
     eliminar(id);
   }
   mostrarCarrito();
@@ -102,10 +98,9 @@ function eliminar(id) {
   mostrarCarrito();
 }
 
-// Configurar el botón para vaciar el carrito
+// Vaciar el carrito
 const btnVaciar = document.getElementById("vaciar");
 if (btnVaciar) {
-  // Agregar evento click al botón
   btnVaciar.addEventListener("click", () => {
     // Reiniciar el carrito a un array vacío
     carrito = [];
