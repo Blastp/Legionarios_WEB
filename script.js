@@ -108,3 +108,18 @@ if (btnVaciar) {
     mostrarCarrito();
   });
 }
+
+// Comprar
+const btnComprar = document.getElementById("comprar");
+if (btnComprar) {
+  btnComprar.addEventListener("click", () => {
+    if (carrito.length > 0) {
+      alert("¡Muchas gracias por su compra!");
+      // Vaciar el carrito después de la compra
+      carrito = [];
+      mostrarCarrito();
+    } else {
+      alert("El carrito está vacío");
+    }
+  });
+}

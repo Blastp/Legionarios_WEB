@@ -198,6 +198,20 @@ header nav .btn {
   font-weight: normal;
 }
 
+#carrito button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+#comprar {
+  background-color: #4CAF50; /* Color verde para el botón de comprar */
+}
+
+#comprar:hover {
+  background-color: #45a049;
+}
+
 /* Lista de productos en el carrito */
 #lista-carrito {
   list-style: none;
