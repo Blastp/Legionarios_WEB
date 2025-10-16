@@ -114,12 +114,16 @@ const btnComprar = document.getElementById("comprar");
 if (btnComprar) {
   btnComprar.addEventListener("click", () => {
     if (carrito.length > 0) {
-      alert("¡Muchas gracias por su compra!");
+      // Mostrar el modal de Bootstrap
+      const modal = new bootstrap.Modal(document.getElementById('compraExitosa'));
+      modal.show();
       // Vaciar el carrito después de la compra
       carrito = [];
       mostrarCarrito();
     } else {
-      alert("El carrito está vacío");
+      // Para el caso de carrito vacío, usamos una notificación de Bootstrap
+      const carritoVacioToast = new bootstrap.Toast(document.getElementById('carritoVacioToast'));
+      carritoVacioToast.show();
     }
   });
 }
