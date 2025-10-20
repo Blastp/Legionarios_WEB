@@ -56,6 +56,8 @@ button:hover, .btn:hover {  /* hover detecta el mouse encima*/
   height: 60vh;
   object-fit: cover; /* Hace que la imagen cubra el background */
   border-radius: 0;
+  max-height: 100%;
+  object-position: center; /* Centra la imagen */
 }
 
 .imagen-frase blockquote {
@@ -281,8 +283,19 @@ footer {
   }
 
   /* Ajuste de la imagen para telefonos */
+  .contenedor-imagen {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
   .contenedor-imagen img {
-    height: 30vh;
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
   }
 
   .catalogo {
@@ -331,6 +344,18 @@ footer {
 
 /* Estilos específicos para dispositivos más chicos (como iPhone) */
 @media (max-width: 390px) {
+  /* Ajustes específicos para la imagen de portada en iPhone */
+  .contenedor-imagen {
+    margin-top: env(safe-area-inset-top, 0);
+  }
+  
+  .contenedor-imagen img {
+    height: 45vh;
+    width: 100vw;
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    max-width: none;
+  }
   /* Ajustes de header para pantallas chicas */
   header {
     padding: 0.3rem 0.8rem;
