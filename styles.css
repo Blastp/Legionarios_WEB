@@ -371,10 +371,12 @@ footer {
 @media (max-width: 390px) {
   /* Ajustes específicos para la imagen de portada en iPhone */
   .contenedor-imagen {
-    margin-left: calc(-1rem);
-    margin-right: calc(-1rem);
-    margin-top: calc(-1rem);
     width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .contenedor-imagen img {
