@@ -59,7 +59,6 @@ button:hover, .btn:hover {  /* hover detecta el mouse encima*/
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden; /* Previene scroll horizontal */
 }
 
 .contenedor-imagen {
@@ -275,10 +274,10 @@ footer {
   margin-top: auto;
 }
 
-/* RESPONSIVE (para visualizar en celulares) */
+/* RESPONSIVE (para visualizar en telefonos) */
 /* Estilos para tablets y dispositivos medianos */
 @media (max-width: 768px) {
-  /* Ajustes del header para móvil */
+  /* Ajustes del header para telefono */
   header {
     height: 60px;
     padding: 0.5rem 1rem;
@@ -306,11 +305,8 @@ footer {
 
   .contenedor-imagen {
     width: 100vw;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-top: -1rem;
+    margin: 0;
     padding: 0;
-    position: relative;
   }
   
   .contenedor-imagen img {
@@ -374,9 +370,6 @@ footer {
     width: 100vw;
     margin: 0;
     padding: 0;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
   
   .contenedor-imagen img {
