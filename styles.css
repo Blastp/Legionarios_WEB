@@ -368,22 +368,36 @@ footer {
   }
 }
 
-/* Estilos específicos para dispositivos más chicos (como iPhone) */
+/* Estilos específicos para iPhone 14 Pro y dispositivos similares */
 @media (max-width: 390px) {
-  /* Ajustes específicos para la imagen de portada en iPhone */
-  .contenedor-imagen {
-    width: 100vw; /* Ancho completo de la ventana visible */
-    position: relative; /* Habilita el posicionamiento preciso */
-    left: 50%; /* Coloca el borde izquierdo en el centro */
-    transform: translateX(-50%); /* Desplaza hacia la izquierda la mitad de su ancho para centrar */
+  body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Ajustes específicos para la imagen de portada en iPhone */
+  .imagen-frase {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .contenedor-imagen {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
   
   .contenedor-imagen img {
-    height: 70vh;
     width: 100%;
-    object-position: center 40%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
     margin: 0;
     padding: 0;
   }
