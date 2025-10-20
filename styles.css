@@ -299,19 +299,18 @@ footer {
 
   /* Ajuste de la imagen para telefonos */
   .contenedor-imagen {
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
   .contenedor-imagen img {
     width: 100%;
-    height: auto;
-    max-height: 50vh;
-    object-fit: contain;
-    object-position: center;
+    height: 65vh;
+    object-fit: cover;
+    object-position: center 30%;
     display: block;
-    border-radius: 4px;
+    margin-top: -1rem; /* Para pegarla al header */
   }
 
   .catalogo {
@@ -361,15 +360,11 @@ footer {
 /* Estilos específicos para dispositivos más chicos (como iPhone) */
 @media (max-width: 390px) {
   /* Ajustes específicos para la imagen de portada en iPhone */
-  .contenedor-imagen {
-    width: 85%;
-    padding: 0.8rem;
-  }
-  
   .contenedor-imagen img {
-    max-height: 45vh;
-    width: auto;
-    max-width: 100%;
+    height: 70vh;
+    width: 100vw;
+    object-position: center 40%;
+    margin-top: -0.5rem;
   }
   /* Ajustes de header para pantallas chicas */
   header {
