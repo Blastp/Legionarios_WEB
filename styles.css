@@ -59,6 +59,7 @@ button:hover, .btn:hover {  /* hover detecta el mouse encima*/
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden; /* Previene scroll horizontal */
 }
 
 .contenedor-imagen {
@@ -298,19 +299,28 @@ footer {
   }
 
   /* Ajuste de la imagen para telefonos */
-  .contenedor-imagen {
-    width: 100%;
+  .imagen-frase {
     margin: 0;
     padding: 0;
   }
+
+  .contenedor-imagen {
+    width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-top: -1rem;
+    padding: 0;
+    position: relative;
+  }
   
   .contenedor-imagen img {
-    width: 100%;
+    width: 100vw;
     height: 65vh;
     object-fit: cover;
     object-position: center 30%;
     display: block;
-    margin-top: -1rem; /* Para pegarla al header */
+    margin: 0;
+    padding: 0;
   }
 
   .catalogo {
@@ -360,11 +370,19 @@ footer {
 /* Estilos específicos para dispositivos más chicos (como iPhone) */
 @media (max-width: 390px) {
   /* Ajustes específicos para la imagen de portada en iPhone */
+  .contenedor-imagen {
+    margin-left: calc(-1rem);
+    margin-right: calc(-1rem);
+    margin-top: calc(-1rem);
+    width: 100vw;
+  }
+  
   .contenedor-imagen img {
     height: 70vh;
     width: 100vw;
     object-position: center 40%;
-    margin-top: -0.5rem;
+    margin: 0;
+    padding: 0;
   }
   /* Ajustes de header para pantallas chicas */
   header {
