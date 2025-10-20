@@ -60,23 +60,20 @@ button:hover, .btn:hover {  /* hover detecta el mouse encima*/
   flex-direction: column;
   width: 100%;
   overflow-x: hidden; /* Previene scroll horizontal */
-  margin-top: -80px; /* Para que toque el header */
 }
 
 .contenedor-imagen {
   width: 100%;
   margin: 0;
-  padding: 0;
 }
 
 .contenedor-imagen img {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   object-fit: cover; /* Hace que la imagen cubra el background */
   border-radius: 0;
   max-height: 100%;
   object-position: center; /* Centra la imagen */
-  display: block; /* Elimina espacios adicionales */
 }
 
 .imagen-frase blockquote {
